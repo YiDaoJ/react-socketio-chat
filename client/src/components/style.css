@@ -1,0 +1,33 @@
+.room-entry__container {
+  height: 100%;
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.room-entry__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.room-entry__form input {
+  width: 300px;
+  height: 50px;
+  font-size: 16px;
+  outline: none;
+  border: 2px solid #0072c2;
+  border-radius: 4px;
+}
+
+.room-entry__form button {
+  width: 200px;
+  height: 50px;
+  font-size: 16px;
+  cursor: pointer;
+}

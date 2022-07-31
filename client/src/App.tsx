@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import io from 'socket.io-client'
 import Chat from './components/Chat';
+import { RoomEntry } from './components/RoomEntry';
 
 const socket = io("http://localhost:3005")
 
@@ -22,12 +23,7 @@ const App: React.FC = () => {
     <div className="App">
       {
         !showChat ? (
-          <>
-            <h3>Join Chat</h3>
-            <input type="text" placeholder="John..." onChange={event => setUsername(event.target.value)} />
-            <input type="text" placeholder="Room ID" onChange={event => setRoom(event.target.value)} />
-            <button onClick={joinRoom}>Join a room</button>
-          </>
+          <RoomEntry joinRoom={joinRoom} setRoom={setRoom} setUsername={setUsername} />
         ) : (
           <Chat socket={socket} username={username} room={room} />
         )
