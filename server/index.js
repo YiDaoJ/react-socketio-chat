@@ -13,7 +13,7 @@ const server = http.createServer(app);
 // 1. param server: connect socketio server with the created express server
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000", // react app url
+    origin: "http://localhost:5173", // react app url
     methods: ["GET", "POST"]
   }
 })
