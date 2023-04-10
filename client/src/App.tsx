@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import viteLogo from "/vite.svg";
 import io from "socket.io-client";
-import Chat from "./components/Chat";
+import { Chat } from "./components/Chat";
 import { RoomEntry } from "./components/RoomEntry";
 
 const socket = io("http://localhost:3005");
